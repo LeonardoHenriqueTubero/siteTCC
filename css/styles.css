@@ -1,0 +1,249 @@
+/* NAVBAR */
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.purple {
+    background-color: #6C63FF;
+}
+
+#logo_img {
+    width: 43px;
+    height: 43px;
+}
+
+.btn-outline-purple {
+    background-color: none;
+    border: 1px solid #3c3797;
+    color: #3c3797;;
+    transition: 0.3s;
+}
+
+.btn-outline-purple:hover {
+    color: white;
+    background-color: #3c3797;
+    border-color: #3c3797;
+}
+
+
+.nav-shadow {
+    box-shadow: 0px 5px 10px rgba(153, 153, 153, 0.4);
+}
+
+.btn-purple-dark {
+    color: white;
+    background-color: #514bc7;
+    border-color: #514bc7;
+    transition: 0.3s;
+}
+
+.btn-purple-dark:hover {
+    color: white;
+    background-color: #3c3797;
+    border-color: #3c3797;
+}
+
+/* HERO */
+
+#hero1 {
+    margin-top: 130px;
+}
+
+#hero_image1 {
+    width: 80%;
+    height: 60%;
+}
+
+.btn-purple {
+    color: white;
+    background-color: #6C63FF;
+    border-color: #6C63FF;
+    transition: 0.3s;
+}
+
+.btn-purple:hover {
+    color: white;
+    background-color: #514bc7;
+    border-color: #514bc7;
+}
+
+
+#hero_image2 {
+    width: 700%;
+    height: 500%;
+}
+
+#text_hero {
+    margin-bottom: 100px;
+}
+
+/*SIGN UP / SIGN IN */
+
+#login {
+    margin-top: 130px;
+}
+
+#login .form-control {
+    border-color: #a5a0ff;
+    transition: 0.3s;
+}
+
+#login .form-control:focus {
+    box-shadow: none;
+    border-color: #3c3797;
+}
+
+#loginImg {
+    width: 700%;
+    height: 100%;
+}
+
+#login .form-check-input {
+    border-color: #a5a0ff;
+}
+
+#login .form-check-input:checked {
+  background-color: #6C63FF;
+  border-color: #6C63FF;
+}
+
+#login .form-check-input:focus {
+    box-shadow: none;
+}
+
+#login a {
+    color: black;
+    transition: 0.2s;
+}
+
+#login a:hover {
+    color: #514bc7
+}
+
+/* TERMS OF USE */
+
+#terms-of-use {
+    margin-top: 130px;
+}
+
+/* USER NAV */
+
+#user {
+    font-size: 30px;
+}
+
+
+#userIcon {
+    color: white;
+    transition: 0.3s;
+}
+
+/* ADS SLIDER */
+
+#sliderAd {
+    margin-top: 130px
+}
+
+#sliders {
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* WORKS */
+
+#work {
+    margin-top: 70px;
+}
+
+.img-work {
+    width: 100%;
+    height: 80%;
+}
+
+.work-links {
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+.work-links:hover {
+    background-color: rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+/* ACCOUNT */
+
+#account {
+    margin-top: 130px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#account-header {
+    height: 200px;
+    position: relative;
+    background-color: rgb(199, 199, 199);
+}
+
+.account-image {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#personPhoto:hover {
+    cursor: pointer;
+}
+
+.user-work {
+    position: relative;
+}
+
+.user-work:hover {
+    cursor: pointer;
+}
+
+/* WHO ARE US */
+
+#whoareus-container {
+    margin-top: 130px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+/* SUPORT */
+
+#suport {
+    margin-top: 130px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#message {
+    height: 200px;
+}
+
+/* SECTOR */
+
+#sector {
+    margin-top: 130px;
+}
+
+#sector-form .form-select {
+    border-color: #a5a0ff;
+}
+
+#sector-form .form-select:focus {
+    box-shadow: none;
+    border-color: #3c3797;
+}
