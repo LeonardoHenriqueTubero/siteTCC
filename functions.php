@@ -22,25 +22,43 @@ function DBClose()
     mysqli_close(connectionDB());
 }
 
-function addUser($query)
+function addUser($query, $email, $pwd)
 {
+    $checkUser = "SELECT user_email, user_password FROM users;";
 
-    $result = mysqli_query(connectionDB(), $query);
+    $allUsers = mysqli_query(connectionDB(), $checkUser);
 
-    if ($result) {
-        header('Location: home.php');
-        die();
-    } else {
-        echo "
-        <div class='col-md-4 position-fixed bottom-0 end-0'>
-            <div class='alert alert-danger alert-dismissible fade show role='alert'>
-                <p class='m-0'> <strong>OPS!</strong> Ocorreu um erro ao tentar cadastrar!</p>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>
-        </div>";
+    while ($line = mysqli_fetch_assoc($allUsers)) {
+        if ($email == $line["user_email"] and $pwd == $line["user_password"]) {
+            echo "
+                <div class='col-md-4 position-fixed bottom-0 end-0'>
+                    <div class='alert alert-danger alert-dismissible fade show role='alert'>
+                        <p class='m-0'> <strong>OPS!</strong> Ocorreu um erro ao tentar cadastrar!</p>
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
+                </div>";
+        } else {
+            $result = mysqli_query(connectionDB(), $query);
+
+            if ($result) {
+                header('Location: login.php');
+                die();
+            } else {
+                echo "
+                    <div class='col-md-4 position-fixed bottom-0 end-0'>
+                        <div class='alert alert-danger alert-dismissible fade show role='alert'>
+                            <p class='m-0'> <strong>OPS!</strong> Ocorreu um erro ao tentar cadastrar!</p>
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>
+                    </div>";
+                $_SESSION = array();
+                die();
+            }
+        }
+
     }
-
 }
+
 
 function loginUser($query, $email, $pwd)
 {
@@ -49,7 +67,7 @@ function loginUser($query, $email, $pwd)
 
     while ($line = mysqli_fetch_array($consultation)) {
         if ($email == $line["user_email"] and $pwd == $line["user_password"]) {
-            header('Location: home.php');
+            header('Location: index.php');
             die();
         }
     }
@@ -64,7 +82,8 @@ function loginUser($query, $email, $pwd)
 
 }
 
-function getName($email, $pwd) {
+function getName($email, $pwd)
+{
 
     $query = "SELECT user_name FROM users WHERE user_email = '$email' AND user_password = $pwd";
 

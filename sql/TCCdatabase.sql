@@ -12,7 +12,7 @@ create table users (
 
 insert into users(user_name, user_email, user_password, terms)
 values
-("João Mendes", "joao@gmail.com", "1234", 1),
-("Maria Tereza", "maria@hotmail.com", "4321", 1),
-("Cléber Oliveira", "cleber@outlook.com", "2143", 1),
-("José Henrique", "jose@gmail.com", "4312", 1);
+("João Mendes", "joao@gmail.com", "12345", 1),
+("Maria Tereza", "maria@hotmail.com", "54321", 1),
+("Cléber Oliveira", "cleber@outlook.com", "21453", 1),
+("José Henrique", "jose@gmail.com", "45312", 1);

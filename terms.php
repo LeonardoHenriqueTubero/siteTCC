@@ -24,9 +24,9 @@
 <body>
 
   <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg purple navbar-dark nav-shadow">
+  <nav class="navbar navbar-expand-lg fixed-top purple navbar-light nav-shadow">
     <div class="container-fluid">
-      <a class="navbar-brand me-0" href="#">
+      <a class="navbar-brand me-0" href="index.php">
         <img src="img/logo.png" alt="logo" id="logo_img"> Constru Ideias
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -34,7 +34,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="container-fluid">
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+        <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbar">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
@@ -42,23 +42,59 @@
               aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="navbar-nav nav-underline ms-md-auto pe-3">
+            <ul class="nav navbar-nav nav-underline pe-3">
               <li class="nav-item">
-                <hr class="d-lg-none my-2 text-white-50">
+                <a href="index.php" class="nav-link active" aria-current="page">Início</a>
               </li>
               <li class="nav-item">
-                <a href="login.php"><button class="btn btn-purple-dark" type="button">Entrar</button></a>
+                <a href="whoareus.php" class="nav-link">Quem somos</a>
               </li>
               <li class="nav-item">
-                <a href="register.php"><button class="btn btn-purple-dark" type="button">Cadastrar</button></a>
+                <a href="sector.php" class="nav-link">Setor Atuação</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.php" class="nav-link">Contato</a>
               </li>
             </ul>
+            <?php
+
+            if (isset($_SESSION['login']) == true) {
+              echo "    
+                <ul class='navbar-nav nav-underline ms-md-auto pe-3'>
+                <li class='nav-item'>
+                  <hr class='d-lg-none my-2 text-dark-50'>
+                </li>
+                <li class='dropdown-center' id='user'>
+                  <a href='#' class='d-flex align-items-center text-white text-decoration-none dropdown-toggle' data-bs-toggle='dropdown' aria-expanded='false'><i class='bi bi-person-circle' id='userIcon'></i></a>
+                  <ul class='dropdown-menu dropdown-menu-end'>
+                    <li><a href='account.php' class='dropdown-item'>Conta</a></li>
+                    <li><a href='#' class='dropdown-item'>Opções</a></li>
+                    <li><hr class='dropdown-divider'></li>
+                    <li><a href='#' class='dropdown-item'>Sair</a></li>
+                  </ul>
+                </li>
+              </ul>";
+            } else {
+              echo "
+              <ul class='navbar-nav nav-underline ms-md-auto pe-3'>
+                <li class='nav-item'>
+                  <hr class='d-lg-none my-2 text-dark-50'>
+                </li>
+                <li class='nav-item'>
+                  <a href='login.php'><button class='btn btn-outline-purple' type='button'>Entrar</button></a>
+                </li>
+                <li class='nav-item'>
+                  <a href='register.php'><button class='btn btn-purple-dark' type='button'>Se torne um profissional</button></a>
+                </li>
+              </ul>
+                ";
+            }
+            ?>
           </div>
         </div>
       </div>
     </div>
   </nav>
-
   <div class="container" id="terms-of-use">
     <div class="row">
       <div class="col-12">
@@ -254,9 +290,23 @@
   </div>
 
   <!--FOOTTER-->
+  <!--FOOTTER-->
   <fotter class="py-3 mx-2">
-    <div class="container ">
-      <div class="border-bottom py-3"></div>
+    <div class="container">
+      <ul class="nav nav-underline justify-content-center border-bottom py-3">
+        <li class="nav-item">
+          <a href="index.php" class="nav-link text-body-secondary">Início</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-body-secondary">Quem somos</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-body-secondary">Setor Atuação</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-body-secondary">Contato</a>
+        </li>
+      </ul>
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>
     </div>
   </fotter>
