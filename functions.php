@@ -85,7 +85,7 @@ function loginUser($query, $email, $pwd)
 function getName($email, $pwd)
 {
 
-    $query = "SELECT user_name FROM users WHERE user_email = '$email' AND user_password = $pwd";
+    $query = "SELECT user_name FROM users WHERE user_email = '$email' AND user_password = '$pwd'";
 
     $result = mysqli_query(connectionDB(), $query);
 

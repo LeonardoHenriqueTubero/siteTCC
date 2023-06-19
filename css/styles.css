@@ -2,6 +2,7 @@
 
 body {
     background-color: rgb(238, 238, 238);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .purple {
@@ -13,18 +14,17 @@ body {
     height: 43px;
 }
 
-.btn-outline-purple {
-    border: 1px solid #3c3797;
-    color: #3c3797;
+.btn-outline-purple-dark {
+    border: 1px solid #514bc7;
+    color:  #514bc7;
     transition: 0.3s;
 }
 
-.btn-outline-purple:hover {
+.btn-outline-purple-dark:hover {
     color: white;
     background-color: #3c3797;
     border-color: #3c3797;
 }
-
 
 .nav-shadow {
     box-shadow: 0px 5px 10px rgba(153, 153, 153, 0.4);
@@ -67,6 +67,17 @@ body {
     border-color: #514bc7;
 }
 
+.btn-outline-purple {
+    border: 1px solid #6C63FF;
+    color:  #6C63FF;
+    transition: 0.3s;
+}
+
+.btn-outline-purple:hover {
+    color: white;
+    background-color: #514bc7;
+    border-color: #514bc7;
+}
 
 #hero_image2 {
     width: 700%;
@@ -135,7 +146,7 @@ body {
 
 
 #userIcon {
-    color: white;
+    color: rgb(0, 0, 0);
     transition: 0.3s;
 }
 
@@ -198,18 +209,23 @@ body {
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
-}
-
-#personPhoto:hover {
     cursor: pointer;
 }
 
-.user-work {
-    position: relative;
+#works-done {
+    background-color: #cfcfcf;
+    border: 1px solid #a8a8a8;
+    height: 200px;
+    width: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
 }
 
-.user-work:hover {
-    cursor: pointer;
+#add-work {
+    font-size: 2em;
 }
 
 /* WHO ARE US */

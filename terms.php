@@ -24,7 +24,7 @@
 <body>
 
   <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg fixed-top purple navbar-light nav-shadow">
+  <nav class="navbar navbar-expand-lg purple navbar-light nav-shadow">
     <div class="container-fluid">
       <a class="navbar-brand me-0" href="index.php">
         <img src="img/logo.png" alt="logo" id="logo_img"> Constru Ideias
@@ -44,7 +44,7 @@
           <div class="offcanvas-body">
             <ul class="nav navbar-nav nav-underline pe-3">
               <li class="nav-item">
-                <a href="index.php" class="nav-link active" aria-current="page">Início</a>
+                <a href="index.php" class="nav-link">Início</a>
               </li>
               <li class="nav-item">
                 <a href="whoareus.php" class="nav-link">Quem somos</a>
@@ -65,12 +65,12 @@
                   <hr class='d-lg-none my-2 text-dark-50'>
                 </li>
                 <li class='dropdown-center' id='user'>
-                  <a href='#' class='d-flex align-items-center text-white text-decoration-none dropdown-toggle' data-bs-toggle='dropdown' aria-expanded='false'><i class='bi bi-person-circle' id='userIcon'></i></a>
+                  <a href='#' class='d-flex align-items-center text-black text-decoration-none dropdown-toggle' data-bs-toggle='dropdown' aria-expanded='false'><i class='bi bi-person-circle' id='userIcon'></i></a>
                   <ul class='dropdown-menu dropdown-menu-end'>
                     <li><a href='account.php' class='dropdown-item'>Conta</a></li>
                     <li><a href='#' class='dropdown-item'>Opções</a></li>
                     <li><hr class='dropdown-divider'></li>
-                    <li><a href='#' class='dropdown-item'>Sair</a></li>
+                    <li><a href='logout.php' class='dropdown-item'>Sair</a></li>
                   </ul>
                 </li>
               </ul>";
@@ -81,7 +81,7 @@
                   <hr class='d-lg-none my-2 text-dark-50'>
                 </li>
                 <li class='nav-item'>
-                  <a href='login.php'><button class='btn btn-outline-purple' type='button'>Entrar</button></a>
+                  <a href='login.php'><button class='btn btn-outline-purple-dark' type='button'>Entrar</button></a>
                 </li>
                 <li class='nav-item'>
                   <a href='register.php'><button class='btn btn-purple-dark' type='button'>Se torne um profissional</button></a>
