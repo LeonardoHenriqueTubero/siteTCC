@@ -15,4 +15,6 @@ values
 ("João Mendes", "joao@gmail.com", "12345", 1),
 ("Maria Tereza", "maria@hotmail.com", "54321", 1),
 ("Cléber Oliveira", "cleber@outlook.com", "21453", 1),
-("José Henrique", "jose@gmail.com", "45312", 1);
+("José Henrique", "jose@gmail.com", "45312", 1),
+("Junior Cesar Da Silva", "junior@gmail.com", "junior12345", 1),
+("Leonardo Henrique Pereira Tubero", "leonardo@gmail.com", "leonardo12345", 1);

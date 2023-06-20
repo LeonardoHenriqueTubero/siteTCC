@@ -1,3 +1,8 @@
+<?php
+session_start();
+clearstatcache();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,13 +128,13 @@
           <a href="index.php" class="nav-link text-body-secondary">Início</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Quem somos</a>
+          <a href="whoareus.php" class="nav-link text-body-secondary">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Setor Atuação</a>
+          <a href="sector.php" class="nav-link text-body-secondary">Setor Atuação</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Contato</a>
+          <a href="contact.php" class="nav-link text-body-secondary">Contato</a>
         </li>
       </ul>
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>

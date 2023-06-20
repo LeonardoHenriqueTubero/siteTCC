@@ -174,7 +174,6 @@ body {
 }
 
 .work-links {
-    padding: 10px;
     font-size: 1.5em;
     background-color: white;
     transition: 0.2s;
@@ -253,6 +252,9 @@ body {
 
 #sector {
     margin-top: 130px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 50px;
 }
 
 #sector-form .form-select {
@@ -262,4 +264,28 @@ body {
 #sector-form .form-select:focus {
     box-shadow: none;
     border-color: #3c3797;
+}
+
+#accounts-header {
+    height: 100px;
+    position: relative;
+    background-color: rgb(199, 199, 199);
+}
+
+.accounts-image {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-top: -55px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#account-people {
+    width: 18rem;
+    margin: auto;
+    margin-bottom: 10px;
 }

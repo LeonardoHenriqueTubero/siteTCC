@@ -106,7 +106,7 @@ include('functions.php');
   <div class="container mb-4 col-lg-8 col-10" id="account">
     <div class="card shadow">
       <div id="account-header"></div>
-      <img src="img/person-circle.svg" alt="..." class="account-image">
+      <img src="img/person-circle.svg" alt="Sua foto" class="account-image">
       <div class="card-body text-justify" id="account-body">
         <?php
 
@@ -135,13 +135,13 @@ include('functions.php');
           <a href="index.php" class="nav-link text-body-secondary">Início</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Quem somos</a>
+          <a href="whoareus.php" class="nav-link text-body-secondary">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Setor Atuação</a>
+          <a href="sector.php" class="nav-link text-body-secondary">Setor Atuação</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Contato</a>
+          <a href="contact.php" class="nav-link text-body-secondary">Contato</a>
         </li>
       </ul>
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>

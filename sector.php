@@ -1,3 +1,9 @@
+<?php
+session_start();
+clearstatcache();
+include('functions.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,8 +29,8 @@
 
 <body>
 
- <!--NAVBAR-->
- <nav class="navbar navbar-expand-lg fixed-top purple navbar-light nav-shadow">
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg fixed-top purple navbar-light nav-shadow">
     <div class="container-fluid">
       <a class="navbar-brand me-0" href="index.php">
         <img src="img/logo.png" alt="logo" id="logo_img"> Constru Ideias
@@ -97,18 +103,41 @@
   </nav>
 
   <!-- SECTOR -->
-  <div class="container mb-4" id="sector">
-    <form class="row justify-content-center" id="sector-form">
-        <h1 class="fw-bold text-body-emphasis text-center mb-4">Selecione a área de atuação</h1>
-        <div class="col-lg-6 col-12">
-            <select class="form-select" aria-label="Selecionar a área">
-                <option selected>Selecionar a área...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+  <div class="container mb-4 shadow" id="sector">
+    <form class="row justify-content-center" id="sector-form" method="POST">
+      <h1 class="fw-bold text-body-emphasis text-center mb-4">Selecione a área de atuação</h1>
+      <div class="col-lg-6 col-12 mb-4">
+        <?php $choice = $_GET['search'] ?? ''; ?>
+        <select class="form-select" name="professional" aria-label="Selecionar a área">
+          <option selected value="null">Selecionar a área...</option>
+          <option value="pedreiro" <?= $choice == 'pedreiro' ? 'selected' : ''?>>Pedreiro</option>
+          <option value="marceneiro" <?= $choice == 'marceneiro' ? 'selected' : ''?>>Marceneiro</option>
+          <option value="pintor" <?= $choice == 'pintor' ? 'selected' : ''?>>Pintor</option>
+          <option value="eletricista" <?= $choice == 'eletricista' ? 'selected' : ''?>>Eletricista</option>
+        </select>
+      </div>
+      <div class="col-lg-2 col-12">
+        <div class="d-grid mb-4">
+            <button type="submit" class="btn btn-purple mb-3" name="send">Pesquisar</button>
         </div>
+      </div>
     </form>
+
+    <?php
+
+      if(isset($_POST['send']) and $_POST['professional'] != "null") {
+        $workersFunction = $_POST['professional'];
+
+        echo "<div class='row'>";
+
+        returnWorkers($workersFunction);
+
+        echo "</div>";
+
+      }
+
+    ?>
+
   </div>
 
   <!--FOOTTER-->
@@ -119,13 +148,13 @@
           <a href="index.php" class="nav-link text-body-secondary">Início</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Quem somos</a>
+          <a href="whoareus.php" class="nav-link text-body-secondary">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Setor Atuação</a>
+          <a href="sector.php" class="nav-link text-body-secondary">Setor Atuação</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Contato</a>
+          <a href="contact.php" class="nav-link text-body-secondary">Contato</a>
         </li>
       </ul>
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>

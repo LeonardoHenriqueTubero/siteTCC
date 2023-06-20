@@ -104,114 +104,183 @@ clearstatcache();
     </div>
   </nav>
 
-  <!--HERO-->
-  <div class="container col-xxl-8 px-4 py-5" id="hero1">
-    <div class="row justify-content-center align-items-center g-5 py-5">
-      <div class="col-lg-8 text-center">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Precisa de um profissional da construção civil?</h1>
-        <p class="lead">Com o Constru Ideias é facil e rápido se conectar a profissionais para sua obra!</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-          <a href="login.php" class="btn btn-outline-purple btn-lg px-4 me-md-2">Entrar</a>
-          <a href="register.php" class="btn btn-purple btn-lg px-4 me-md-2">Se torne um profissional</a>
-        </div>
-      </div>
-      <div class="container d-flex mt-4">
-        <img src="img/escolher.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" id="hero_image1"
-          loading="lazy">
-      </div>
-    </div>
-  </div>
+  <?php
 
-  <!-- ADS SLIDER -->
-  <div class="container mb-4" id="sliderAd">
-    <h2 class="fw-bold text-center display-5 mb-4">Propagandas de empresas ao redor de você:</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-9 col-12 shadow-lg"  id="sliders">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
+  if (isset($_SESSION['login']) == true) {
+    echo"
+    <!-- ADS SLIDER -->
+    <div class='container mb-4' id='sliderAd'>
+      <h2 class='fw-bold text-center display-5 mb-4'>Propagandas de empresas ao redor de você:</h2>
+      <div class='row justify-content-center'>
+        <div class='col-lg-9 col-12 shadow-lg'  id='sliders'>
+          <div id='carouselExampleIndicators' class='carousel slide carousel-dark' data-bs-ride='carousel'>
+            <div class='carousel-indicators'>
+              <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' class='active'
+                aria-current='true' aria-label='Slide 1'></button>
+              <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1'
+                aria-label='Slide 2'></button>
+              <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2'
+                aria-label='Slide 3'></button>
+            </div>
+            <div class='carousel-inner'>
+              <div class='carousel-item active'>
+                <img src='img/propaganda2.jpg' class='d-block img-fluid' alt='algo'>
+              </div>
+              <div class='carousel-item'>
+                <img src='img/propaganda2.jpg' class='d-block img-fluid' alt='algo'>
+              </div>
+              <div class='carousel-item'>
+                <img src='img/propaganda2.jpg' class='d-block img-fluid' alt='algo'>
+              </div>
+            </div>
+            <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleIndicators'
+              data-bs-slide='prev'>
+              <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+              <span class='visually-hidden'>Previous</span>
+            </button>
+            <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleIndicators'
+              data-bs-slide='next'>
+              <span class='carousel-control-next-icon' aria-hidden='true'></span>
+              <span class='visually-hidden'>Next</span>
+            </button>
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/propaganda2.jpg" class="d-block img-fluid" alt="algo">
-            </div>
-            <div class="carousel-item">
-              <img src="img/propaganda2.jpg" class="d-block img-fluid" alt="algo">
-            </div>
-            <div class="carousel-item">
-              <img src="img/propaganda2.jpg" class="d-block img-fluid" alt="algo">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
-  </div>
 
-   <!-- WORKS -->
-   <div class="container mb-4" id="work">
-    <div class="row justify-content-center gap-1">
-      <h2 class="fw-bold text-center display-5 mb-4">Trabalhos mais realizados na sua região:</h2>
-      <div class="col-lg-5 col-11 shadow-sm work-links" onclick="location.href='index.php'">
-        <p class="mb-0"><i class="bi bi-bricks"></i> Pedreiro</p>
-      </div>
-      <div class="col-lg-5 col-11 shadow-sm work-links">
-        <p class="mb-0"><i class="bi bi-brush"></i> Pintor</p>
-      </div>
-      <div class="col-lg-5 col-11 shadow-sm work-links">
-        <p class="mb-0"><i class="bi bi-hammer"></i> Marceneiro</p>
-      </div>
-      <div class="col-lg-5 col-11 shadow-sm work-links">
-        <p class="mb-0"><i class="bi bi-tools"></i> Eletricista </p>
+    <!-- WORKS -->
+    <div class='container mb-4' id='work'>
+      <div class='row justify-content-center gap-1'>
+        <h2 class='fw-bold text-center display-5 mb-4'>Trabalhos mais realizados na sua região:</h2>
+        <div class='col-lg-5 col-11 shadow-sm work-links'>
+          <p class='mb-0'><i class='bi bi-bricks'></i> Pedreiro</p>
+        </div>
+        <div class='col-lg-5 col-11 shadow-sm work-links'>
+          <p class='mb-0'><i class='bi bi-brush'></i> Pintor</p>
+        </div>
+        <div class='col-lg-5 col-11 shadow-sm work-links'>
+          <p class='mb-0'><i class='bi bi-hammer'></i> Marceneiro</p>
+        </div>
+        <div class='col-lg-5 col-11 shadow-sm work-links'>
+          <p class='mb-0'><i class='bi bi-tools'></i> Eletricista </p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="container text-center justify-content-center" id="text_hero">
-    <h2 class="display-5 fw-bold">O que você pode fazer neste site?</h2>
-  </div>
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5">
-      <div class="col-10 col-md-8 col-lg-6">
-        <img src="img/construção.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" id="hero_image2"
-          loading="lazy">
-      </div>
-      <div class="col-md-6">
-        <h2 class="display-6 fw-bold">Conecte-se a outras pessoas</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis nunc scelerisque, maximus
-          nisi eget, varius tellus. Nam imperdiet mi sit amet diam volutpat, et mollis metus bibendum. Aliquam nisi.</p>
-      </div>
-    </div>
-  </div>
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-5">
-      <div class="col-10 col-md-8 col-lg-6">
-        <img src="img/engenheiro.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" id="hero_image2"
-          loading="lazy">
-      </div>
-      <div class="col-md-6">
-        <h2 class="display-6 fw-bold">Dividido por setores</h2>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis nunc scelerisque, maximus
-          nisi eget, varius tellus. Nam imperdiet mi sit amet diam volutpat, et mollis metus bibendum. Aliquam nisi.</p>
+    ";
+  } else {
+    echo "
+    <!--HERO-->
+    <div class='container col-xxl-8 px-4 py-5' id='hero1'>
+      <div class='row justify-content-center align-items-center g-5 py-5'>
+        <div class='col-lg-8 text-center'>
+          <h1 class='display-5 fw-bold text-body-emphasis lh-1 mb-3'>Precisa de um profissional da construção civil?</h1>
+          <p class='lead'>Com o Constru Ideias é facil e rápido se conectar a profissionais para sua obra!</p>
+          <div class='d-grid gap-2 d-md-flex justify-content-md-center'>
+            <a href='login.php' class='btn btn-outline-purple btn-lg px-4 me-md-2'>Entrar</a>
+            <a href='register.php' class='btn btn-purple btn-lg px-4 me-md-2'>Se torne um profissional</a>
+          </div>
+        </div>
+        <div class='container d-flex mt-4'>
+          <img src='img/escolher.svg' class='d-block mx-lg-auto img-fluid' alt='Bootstrap Themes' id='hero_image1'
+            loading='lazy'>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--FOOTTER-->
+    <!-- ADS SLIDER -->
+    <div class='container mb-4' id='sliderAd'>
+      <h2 class='fw-bold text-center display-5 mb-4'>Propagandas de empresas ao redor de você:</h2>
+      <div class='row justify-content-center'>
+        <div class='col-lg-9 col-12 shadow-lg'  id='sliders'>
+          <div id='carouselExampleIndicators' class='carousel slide carousel-dark' data-bs-ride='carousel'>
+            <div class='carousel-indicators'>
+              <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' class='active'
+                aria-current='true' aria-label='Slide 1'></button>
+              <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1'
+                aria-label='Slide 2'></button>
+              <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2'
+                aria-label='Slide 3'></button>
+            </div>
+            <div class='carousel-inner'>
+              <div class='carousel-item active'>
+                <img src='img/propaganda2.jpg' class='d-block img-fluid' alt='algo'>
+              </div>
+              <div class='carousel-item'>
+                <img src='img/propaganda2.jpg' class='d-block img-fluid' alt='algo'>
+              </div>
+              <div class='carousel-item'>
+                <img src='img/propaganda2.jpg' class='d-block img-fluid' alt='algo'>
+              </div>
+            </div>
+            <button class='carousel-control-prev' type='button' data-bs-target='#carouselExampleIndicators'
+              data-bs-slide='prev'>
+              <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+              <span class='visually-hidden'>Previous</span>
+            </button>
+            <button class='carousel-control-next' type='button' data-bs-target='#carouselExampleIndicators'
+              data-bs-slide='next'>
+              <span class='carousel-control-next-icon' aria-hidden='true'></span>
+              <span class='visually-hidden'>Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORKS -->
+    <div class='container mb-4' id='work'>
+      <form class='row justify-content-center gap-1' action='sector.php' method='get'>
+        <h2 class='fw-bold text-center display-5 mb-4'>Trabalhos mais realizados na sua região:</h2>
+        <div class='col-lg-5 col-11 d-grid'>
+          <button type='submit' class='btn btn-sm work-links mb-0 shadow-sm' name='search' value='pedreiro'><i class='bi bi-bricks'></i> Pedreiro </p>
+        </div>
+        <div class='col-lg-5 col-11 d-grid'>
+          <button type='submit' class='btn work-links mb-0 shadow-sm' name='search' value='marceneiro'><i class='bi bi-hammer'></i> Marceneiro </p>
+        </div>
+        <div class='col-lg-5 col-11 d-grid'>
+          <button type='submit' class='btn work-links mb-0 shadow-sm' name='search' value='pintor'><i class='bi bi-brush'></i> Pintor </p>
+        </div>
+        <div class='col-lg-5 col-11 d-grid'>
+          <button type='submit' class='btn work-links mb-0 shadow-sm' name='search' value='eletricista'><i class='bi bi-tools'></i> Eletricista </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='container text-center justify-content-center' id='text_hero'>
+      <h2 class='display-5 fw-bold'>O que você pode fazer neste site?</h2>
+    </div>
+    <div class='container col-xxl-8 px-4 py-5'>
+      <div class='row flex-lg-row-reverse align-items-center g-5'>
+        <div class='col-10 col-md-8 col-lg-6'>
+          <img src='img/construção.svg' class='d-block mx-lg-auto img-fluid' alt='Bootstrap Themes' id='hero_image2'
+            loading='lazy'>
+        </div>
+        <div class='col-md-6'>
+          <h2 class='display-6 fw-bold'>Conecte-se a outras pessoas</h2>
+          <p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis nunc scelerisque, maximus
+            nisi eget, varius tellus. Nam imperdiet mi sit amet diam volutpat, et mollis metus bibendum. Aliquam nisi.</p>
+        </div>
+      </div>
+    </div>
+    <div class='container col-xxl-8 px-4 py-5'>
+      <div class='row align-items-center g-5'>
+        <div class='col-10 col-md-8 col-lg-6'>
+          <img src='img/engenheiro.svg' class='d-block mx-lg-auto img-fluid' alt='Bootstrap Themes' id='hero_image2'
+            loading='lazy'>
+        </div>
+        <div class='col-md-6'>
+          <h2 class='display-6 fw-bold'>Dividido por setores</h2>
+          <p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce iaculis nunc scelerisque, maximus
+            nisi eget, varius tellus. Nam imperdiet mi sit amet diam volutpat, et mollis metus bibendum. Aliquam nisi.</p>
+        </div>
+      </div>
+    </div>
+    ";
+  }
+  ?>
+
+  
+
   <!--FOOTTER-->
   <fotter class="py-3 mx-2">
     <div class="container">
@@ -220,13 +289,13 @@ clearstatcache();
           <a href="index.php" class="nav-link text-body-secondary">Início</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Quem somos</a>
+          <a href="whoareus.php" class="nav-link text-body-secondary">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Setor Atuação</a>
+          <a href="sector.php" class="nav-link text-body-secondary">Setor Atuação</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Contato</a>
+          <a href="contact.php" class="nav-link text-body-secondary">Contato</a>
         </li>
       </ul>
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>

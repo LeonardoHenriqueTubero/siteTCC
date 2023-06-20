@@ -194,7 +194,6 @@ if (isset($_POST['register'])) {
   </div>
 
   <!--FOOTTER-->
-  <!--FOOTTER-->
   <fotter class="py-3 mx-2">
     <div class="container">
       <ul class="nav nav-underline justify-content-center border-bottom py-3">
@@ -202,13 +201,13 @@ if (isset($_POST['register'])) {
           <a href="index.php" class="nav-link text-body-secondary">Início</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Quem somos</a>
+          <a href="whoareus.php" class="nav-link text-body-secondary">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Setor Atuação</a>
+          <a href="sector.php" class="nav-link text-body-secondary">Setor Atuação</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-body-secondary">Contato</a>
+          <a href="contact.php" class="nav-link text-body-secondary">Contato</a>
         </li>
       </ul>
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>

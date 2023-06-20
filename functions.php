@@ -24,38 +24,37 @@ function DBClose()
 
 function addUser($query, $email, $pwd)
 {
-    $checkUser = "SELECT user_email, user_password FROM users;";
+    $checkUser = "SELECT user_email, user_password FROM users WHERE user_email = '$email' AND user_password = '$pwd';";
 
-    $allUsers = mysqli_query(connectionDB(), $checkUser);
+    $user = mysqli_query(connectionDB(), $checkUser);
 
-    while ($line = mysqli_fetch_assoc($allUsers)) {
-        if ($email == $line["user_email"] and $pwd == $line["user_password"]) {
-            echo "
-                <div class='col-md-4 position-fixed bottom-0 end-0'>
-                    <div class='alert alert-danger alert-dismissible fade show role='alert'>
-                        <p class='m-0'> <strong>OPS!</strong> Ocorreu um erro ao tentar cadastrar!</p>
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                    </div>
-                </div>";
+    if (mysqli_num_rows($user) != 0) {
+        echo "
+            <div class='col-md-4 position-fixed bottom-0 end-0'>
+                <div class='alert alert-danger alert-dismissible fade show role='alert'>
+                    <p class='m-0'> <strong>OPS!</strong> Esse e-mail ou senha já foram usados!</p>
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+            </div>
+            ";
+        return false;
+    } else {
+        $result = mysqli_query(connectionDB(), $query);
+
+        if ($result) {
+            header('Location: login.php');
+            die();
         } else {
-            $result = mysqli_query(connectionDB(), $query);
-
-            if ($result) {
-                header('Location: login.php');
-                die();
-            } else {
-                echo "
-                    <div class='col-md-4 position-fixed bottom-0 end-0'>
-                        <div class='alert alert-danger alert-dismissible fade show role='alert'>
-                            <p class='m-0'> <strong>OPS!</strong> Ocorreu um erro ao tentar cadastrar!</p>
-                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                        </div>
-                    </div>";
-                $_SESSION = array();
-                die();
-            }
+            echo "
+                        <div class='col-md-4 position-fixed bottom-0 end-0'>
+                            <div class='alert alert-danger alert-dismissible fade show role='alert'>
+                                <p class='m-0'> <strong>OPS!</strong> Ocorreu um erro ao tentar cadastrar!</p>
+                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                            </div>
+                        </div>";
+            $_SESSION = array();
+            return true;
         }
-
     }
 }
 
@@ -102,6 +101,25 @@ function getName($email, $pwd)
     $name = mysqli_fetch_assoc($result);
 
     return implode("", $name);
+}
+
+function returnWorkers($workersFunction)
+{
+    for ($i = 0; $i <= 5; $i++) {
+        echo "
+        <div class='col-lg-4 col-md-6 d-fluid'>
+            <div class='card' id='account-people'>
+                <div id='accounts-header'></div>
+                <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
+                <div class='card-body'>
+                    <h3 class='card-title text-center'> Nome legal </h5>
+                    <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
+                    <a href='#' class='btn btn-primary'> Ver perfil</a>
+                </div>
+            </div>
+         </div>
+        ";
+    }
 }
 
 ?>
