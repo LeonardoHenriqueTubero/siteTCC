@@ -134,7 +134,7 @@ if (isset($_POST['login'])) {
 
   <!--SIGN IN-->
   <div class="container mb-4" id="login">
-    <form class="row justify-content-center flex-lg-row-reverse needs-validation" method="POST" novalidate>
+    <form class="row justify-content-center flex-lg-row-reverse needs-validation" autocomplete="off" method="POST" novalidate>
       <div class="col-12 col-lg-6">
         <h2 class="fw-bold text-body-emphasis mb-4">Entre na sua conta</h2>
         <p>Você não tem uma conta? <a href="register.php">Cadastre-se</a></p>
@@ -161,8 +161,8 @@ if (isset($_POST['login'])) {
           <p>Ou entre de outras formas:</p>
         </div>
         <div class="d-grid">
-          <button class="btn btn-purple btn-lg mb-3"><i class="bi bi-google"></i> Entrar com Google</button>
-          <button class="btn btn-purple btn-lg mb-3"><i class="bi bi-facebook"></i> Entrar com Facebook</button>
+          <button type="button" class="btn btn-purple btn-lg mb-3"><i class="bi bi-google"></i> Entrar com Google</button>
+          <button type="button" class="btn btn-purple btn-lg mb-3"><i class="bi bi-facebook"></i> Entrar com Facebook</button>
         </div>
       </div>
       <div class="col-10 col-md-8 col-lg-6">

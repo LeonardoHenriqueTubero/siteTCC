@@ -1,7 +1,7 @@
 <?php
 session_start();
-clearstatcache();
 include('functions.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -107,34 +107,37 @@ include('functions.php');
     <form class="row justify-content-center" id="sector-form" method="POST">
       <h1 class="fw-bold text-body-emphasis text-center mb-4">Selecione a área de atuação</h1>
       <div class="col-lg-6 col-12 mb-4">
-        <?php $choice = $_GET['search'] ?? ''; ?>
-        <select class="form-select" name="professional" aria-label="Selecionar a área">
+        <?php
+        $choice = $_GET['search'] ?? '';
+        ?>
+        <select class="form-select" data-field_type="select" name="professional" aria-label="Selecionar a área">
           <option selected value="null">Selecionar a área...</option>
-          <option value="pedreiro" <?= $choice == 'pedreiro' ? 'selected' : ''?>>Pedreiro</option>
-          <option value="marceneiro" <?= $choice == 'marceneiro' ? 'selected' : ''?>>Marceneiro</option>
-          <option value="pintor" <?= $choice == 'pintor' ? 'selected' : ''?>>Pintor</option>
-          <option value="eletricista" <?= $choice == 'eletricista' ? 'selected' : ''?>>Eletricista</option>
+          <option value="pedreiro" <?= $choice == 'pedreiro' ? 'selected' : '' ?>>Pedreiro</option>
+          <option value="marceneiro" <?= $choice == 'marceneiro' ? 'selected' : '' ?>>Marceneiro</option>
+          <option value="pintor" <?= $choice == 'pintor' ? 'selected' : '' ?>>Pintor</option>
+          <option value="eletricista" <?= $choice == 'eletricista' ? 'selected' : '' ?>>Eletricista</option>
         </select>
       </div>
       <div class="col-lg-2 col-12">
         <div class="d-grid mb-4">
-            <button type="submit" class="btn btn-purple mb-3" name="send">Pesquisar</button>
+          <button type="submit" class="btn btn-purple mb-3" name="send">Pesquisar</button>
         </div>
       </div>
     </form>
 
     <?php
 
-      if(isset($_POST['send']) and $_POST['professional'] != "null") {
-        $workersFunction = $_POST['professional'];
+    if (isset($_POST['send']) and $_POST['professional'] != "null") {
+      $workersFunction = $_POST['professional'];
 
-        echo "<div class='row'>";
+      echo "<div class='row'>";
 
-        returnWorkers($workersFunction);
+      returnWorkers($workersFunction);
 
-        echo "</div>";
+      echo "</div>";
 
-      }
+      return false;
+    }
 
     ?>
 
@@ -160,6 +163,12 @@ include('functions.php');
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>
     </div>
   </fotter>
+
+  <script>
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, null, window.location.href);
+    }
+  </script>
 </body>
 
 </html>

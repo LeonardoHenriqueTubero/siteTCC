@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +24,7 @@ session_start();
 <body>
 
   <!--NAVBAR-->
- <nav class="navbar navbar-expand-lg fixed-top purple navbar-light nav-shadow">
+  <nav class="navbar navbar-expand-lg fixed-top purple navbar-light nav-shadow">
     <div class="container-fluid">
       <a class="navbar-brand me-0" href="index.php">
         <img src="img/logo.png" alt="logo" id="logo_img"> Constru Ideias
@@ -57,7 +53,7 @@ session_start();
                 <a href="sector.php" class="nav-link">Setor Atuação</a>
               </li>
               <li class="nav-item">
-                <a href="contact.php" class="nav-link active" aria-current="page">Contato</a>
+                <a href="contact.php" class="nav-link">Contato</a>
               </li>
             </ul>
             <?php
@@ -100,35 +96,29 @@ session_start();
     </div>
   </nav>
 
-  <!-- SUPORT FORM -->
-  <div class="container mb-4 shadow" id="suport">
-    <form class="row justify-content-center">
-        <div class="col-12">
-            <h1 class="fw-bold text-body-emphasis border-bottom border-2 text-center">Suporte</h1>
-            <h3 class="mb-4 text-center">Entre em contato conosco!</h3>
+   <!-- USERSACCOUNT -->
+   <div class="container mb-4 col-lg-8 col-10" id="users-account">
+    <a href="sector.php"><i class="bi bi-arrow-left"></i> Voltar</a>
+    <div class="card shadow">
+      <div id="users-account-header"></div>
+      <img src="img/person-circle.svg" alt="Sua foto" class="users-account-image">
+      <div class="card-body text-justify" id="users-account-body">
+        <?php
+        $worker = $_GET['worker'] ?? '';
+        echo "<h3 class='card-title text-center'>$worker</h3>";
+
+        ?>
+        <h4 class="text-center">Descrição: </h4>
+        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim tincidunt consectetur.
+          Fusce nulla metus, pellentesque id tellus eu, gravida rutrum justo. Nullam semper egestas risus. In enim nunc,
+          euismod.</p>
+        <h4 class="text-center">Trabalhos feitos: </h4>
+        <div class="position-relative" id="users-works-done">
+          <div class="position-absolute top-50 start-50 translate-middle">
+          </div>
         </div>
-        <div class="col-lg-6 col-12">
-            <div class="form-floating mb-3">
-                <input type="text" name="name" id="name" class="form-control" placeholder="Nome">
-                <label class="form-label" for="email">Nome</label>
-              </div>
-        </div>
-        <div class="col-lg-6 col-12">
-            <div class="form-floating mb-3">
-                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
-                <label class="form-label" for="email">E-mail</label>
-              </div>
-        </div>
-        <div class="col-lg-12 col-12">
-            <div class="form-floating mb-3">
-                <textarea name="message" id="message" class="form-control" placeholder="Mensagem"></textarea>
-                <label class="form-label" for="message">Mensagem</label>
-              </div>
-        </div>
-        <div class="col-lg-2 col-12 d-grid">
-            <button type="submit" class="btn btn-purple mb-3 btn-lg" onclick="location.href='index.php'">Enviar</button>
-        </div>
-    </form>
+      </div>
+    </div>
   </div>
 
   <!--FOOTTER-->

@@ -1,6 +1,5 @@
 <?php
 session_start();
-clearstatcache();
 include('functions.php');
 ?>
 
@@ -102,7 +101,7 @@ include('functions.php');
     </div>
   </nav>
 
-  <!-- ACCOUNT HEADER -->
+  <!-- ACCOUNT -->
   <div class="container mb-4 col-lg-8 col-10" id="account">
     <div class="card shadow">
       <div id="account-header"></div>

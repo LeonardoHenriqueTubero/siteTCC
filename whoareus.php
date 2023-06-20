@@ -1,6 +1,5 @@
 <?php
 session_start();
-clearstatcache();
 ?>
 
 <!DOCTYPE html>
@@ -102,17 +101,14 @@ clearstatcache();
   </nav>
 
   <!-- WHO ARE US -->
-  <div class="container col-xxl-8 px-4 py-5 shadow" id="whoareus-container">
-    <div class="row g-5">
-      <div class="col-10 col-md-8 col-lg-6">
-        <img src="https://picsum.photos/650/500" class="d-block mx-lg-auto img-fluid rounded-4" alt="Nossa foto" loading="lazy">
-      </div>
-      <div class="col-lg-6">
+  <div class="container col-lg-8 px-4 py-5 shadow" id="whoareus-container">
+    <div class="row g-5 text-center">
+      <div class="col-12">
         <h2 class="display-6 fw-bold">Quem somos</h2>
         <p class="lead">
           A Constru Ideias Inovadoras busca trazer a melhor experiência para os clientes e profissionais do ramo, buscando soluções inovadoras para melhor os conectar.
           Buscamos elevar nossa marca com perseverança, inovação tecnologia e um melhor vinculo aos clientes. 
-          Com grande leque de profissionais, empresas e equipes que entregue um trabalho de qualidade, aos diversos setores de construções e reformas.
+          Com grande leque de profissionais, empresas e equipes que entregue um trabalho de qualidade, aos diversos setores da construção civil.
           Buscando inovar na soluções inteligentes e deixando um bom atendimento.
         </p>
       </div>

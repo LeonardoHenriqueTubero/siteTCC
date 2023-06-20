@@ -183,8 +183,8 @@ if (isset($_POST['register'])) {
           <p>Ou cadastre de outras formas:</p>
         </div>
         <div class="d-grid">
-          <button class="btn btn-purple btn-lg mb-3"><i class="bi bi-google"></i> Entrar com Google</button>
-          <button class="btn btn-purple btn-lg mb-3"><i class="bi bi-facebook"></i> Entrar com Facebook</button>
+          <button type="button" class="btn btn-purple btn-lg mb-3"><i class="bi bi-google"></i> Entrar com Google</button>
+          <button type="button" class="btn btn-purple btn-lg mb-3"><i class="bi bi-facebook"></i> Entrar com Facebook</button>
         </div>
       </div>
       <div class="col-10 col-md-8 col-lg-6">

@@ -105,21 +105,96 @@ function getName($email, $pwd)
 
 function returnWorkers($workersFunction)
 {
-    for ($i = 0; $i <= 5; $i++) {
-        echo "
+    echo "
         <div class='col-lg-4 col-md-6 d-fluid'>
-            <div class='card' id='account-people'>
-                <div id='accounts-header'></div>
+            <div class='card account-people'>
+                <div class='accounts-header'></div>
                 <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
                 <div class='card-body'>
-                    <h3 class='card-title text-center'> Nome legal </h5>
+                    <h3 class='card-title text-center'> José Paulo </h5>
                     <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
-                    <a href='#' class='btn btn-primary'> Ver perfil</a>
+                    <form method='GET' action='userspage.php'>
+                        <button type='submit' class='btn btn-primary' name='worker' value='José Paulo'> Ver perfil</button>
+                    </form>
                 </div>
             </div>
          </div>
         ";
-    }
+        echo "
+        <div class='col-lg-4 col-md-6 d-fluid'>
+            <div class='card account-people'>
+                <div class='accounts-header'></div>
+                <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
+                <div class='card-body'>
+                    <h3 class='card-title text-center'> Ana Paula </h5>
+                    <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
+                    <form method='GET' action='userspage.php'>
+                        <button type='submit' class='btn btn-primary' name='worker' value='Ana Paulo'> Ver perfil</button>
+                    </form>
+                </div>
+            </div>
+         </div>
+        ";
+        echo "
+        <div class='col-lg-4 col-md-6 d-fluid'>
+            <div class='card account-people'>
+                <div class='accounts-header'></div>
+                <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
+                <div class='card-body'>
+                    <h3 class='card-title text-center'> Mário Andrade </h5>
+                    <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
+                    <form method='GET' action='userspage.php'>
+                        <button type='submit' class='btn btn-primary' name='worker' value='Mário Andrade'> Ver perfil</button>
+                    </form>
+                </div>
+            </div>
+         </div>
+        ";
+        echo "
+        <div class='col-lg-4 col-md-6 d-fluid'>
+            <div class='card account-people'>
+                <div class='accounts-header'></div>
+                <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
+                <div class='card-body'>
+                    <h3 class='card-title text-center'> Aparecida Souza </h5>
+                    <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
+                    <form method='GET' action='userspage.php'>
+                        <button type='submit' class='btn btn-primary' name='worker' value='Aparecida Souza'> Ver perfil</button>
+                    </form>
+                </div>
+            </div>
+         </div>
+        ";
+        echo "
+        <div class='col-lg-4 col-md-6 d-fluid'>
+            <div class='card account-people'>
+                <div class='accounts-header'></div>
+                <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
+                <div class='card-body'>
+                    <h3 class='card-title text-center'> João Camargo </h5>
+                    <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
+                    <form method='GET' action='userspage.php'>
+                        <button type='submit' class='btn btn-primary' name='worker' value='João Camargo'> Ver perfil</button>
+                    </form>
+                </div>
+            </div>
+         </div>
+        ";
+        echo "
+        <div class='col-lg-4 col-md-6 d-fluid'>
+            <div class='card account-people'>
+                <div class='accounts-header'></div>
+                <img src='img\person-circle.svg' class='accounts-image' alt='Foto Usuário'>
+                <div class='card-body'>
+                    <h3 class='card-title text-center'> Eliana Pereira </h5>
+                    <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
+                    <form method='GET' action='userspage.php'>
+                        <button type='submit' class='btn btn-primary' name='worker' value='Eliana Pereira'> Ver perfil</button>
+                    </form>
+                </div>
+            </div>
+         </div>
+        ";
 }
 
 ?>
