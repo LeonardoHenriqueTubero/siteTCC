@@ -129,7 +129,7 @@ function returnWorkers($workersFunction)
                     <h3 class='card-title text-center'> Ana Paula </h5>
                     <p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel.</p>
                     <form method='GET' action='userspage.php'>
-                        <button type='submit' class='btn btn-primary' name='worker' value='Ana Paulo'> Ver perfil</button>
+                        <button type='submit' class='btn btn-primary' name='worker' value='Ana Paula'> Ver perfil</button>
                     </form>
                 </div>
             </div>
