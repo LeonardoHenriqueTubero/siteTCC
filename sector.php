@@ -164,12 +164,6 @@ include('functions.php');
       <p class="text-body-secondary text-center py-3">&copy 2023 Constru Ideias</p>
     </div>
   </fotter>
-
-  <script>
-    if (window.history.replaceState) {
-      window.history.replaceState(null, null, null, window.location.href);
-    }
-  </script>
 </body>
 
 </html>

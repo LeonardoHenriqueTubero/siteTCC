@@ -103,7 +103,7 @@ include('functions.php');
   </nav>
 
   <!-- ACCOUNT -->
-  <div class="container mb-4 col-lg-8 col-10" id="account">
+  <div class="container mb-4 col-lg-8 col-12" id="account">
     <div class="card shadow">
       <div id="account-header"></div>
       <img src="img/person-circle.svg" alt="Sua foto" class="account-image">

@@ -113,7 +113,7 @@ session_start();
       <h2 class='fw-bold text-center display-5 mb-4'>Propagandas de empresas ao redor de você:</h2>
       <div class='row justify-content-center'>
         <div class='col-lg-9 col-12 shadow-lg'  id='sliders'>
-          <div id='carouselExampleIndicators' class='carousel slide carousel-dark' data-bs-ride='carousel'>
+          <div id='carouselExampleIndicators' class='carousel slide' data-bs-ride='carousel'>
             <div class='carousel-indicators'>
               <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' class='active'
                 aria-current='true' aria-label='Slide 1'></button>
@@ -187,11 +187,11 @@ session_start();
     </div>
 
     <!-- ADS SLIDER -->
-    <div class='container mb-4' id='sliderAd'>
+    <div class='container mb-4'>
       <h2 class='fw-bold text-center display-5 mb-4'>Propagandas de empresas ao redor de você:</h2>
       <div class='row justify-content-center'>
         <div class='col-lg-9 col-12 shadow-lg'  id='sliders'>
-          <div id='carouselExampleIndicators' class='carousel slide carousel-dark' data-bs-ride='carousel'>
+          <div id='carouselExampleIndicators' class='carousel slide' data-bs-ride='carousel'>
             <div class='carousel-indicators'>
               <button type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' class='active'
                 aria-current='true' aria-label='Slide 1'></button>

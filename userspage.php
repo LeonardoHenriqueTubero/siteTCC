@@ -98,7 +98,7 @@
   </nav>
 
    <!-- USERSACCOUNT -->
-   <div class="container mb-4 col-lg-8 col-10" id="users-account">
+   <div class="container mb-4 col-lg-8 col-12" id="users-account">
     <a href="sector.php"><i class="bi bi-arrow-left"></i> Voltar</a>
     <div class="card shadow">
       <div id="users-account-header"></div>
