@@ -4,6 +4,8 @@ Site desenvolvido como TCC que conecta clientes a profissionais da construção 
 
 Feito com **PHP** (sem framework), **MySQL/MariaDB** e **Bootstrap 5**.
 
+🏆 **Premiado como o melhor TCC da turma.**
+
 ## Páginas
 
 | Arquivo | Descrição |
