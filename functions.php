@@ -1,7 +1,7 @@
 <?php
 function connectionDB()
 {
-    $con = mysqli_connect("localhost", "root", "", "tccdatabase");
+    $con = mysqli_connect(getenv("DB_HOST") ?: "localhost", "root", "", "tccdatabase");
     if (mysqli_connect_errno()) {
         echo "
                 <div class='col-md-4 position-fixed bottom-0 end-0'>
